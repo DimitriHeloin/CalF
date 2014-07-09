@@ -1,0 +1,143 @@
+
+
+<ion-view>
+<div class="bar bar-header bar-stable">
+  <h1 class="title">Nouvelle Alerte</h1>
+</div>
+  <ion-content class="has-header padding">
+
+  <div class="list" style="text-align:left;">
+
+        <form id="ajout_rappel" method="post" action="#">
+          <label class="item item-input">
+            <span class="input-label">Titre <span class="rouge">*</span></span>
+            <input id="titre" name="titre" type="text" value="">
+          </label>
+
+           <label class="item item-input">
+            <span class="input-label">Date début <span class="rouge">*</span></span>
+            <input id="dateDebut" name="dateDebut" type="date" value="">
+          </label>
+
+          <label class="item item-input">
+            <span class="input-label">Date fin <span class="rouge">*</span></span>
+            <input id="dateFin" name="dateFin" type="date" value="">
+          </label>
+
+          <label class="item item-input">
+            <span class="input-label">Description</span>
+            <textarea id="description" name="description" type="text" rows="6" value=""></textarea>
+          </label>
+
+          <label class="item item-input item-select">
+            <span class="input-label ">Priorité</span>
+            <select id="priorite" name="priorite">
+                <option value="Haute">Haute</option>
+                <option value="Moyenne">Moyenne</option>
+                <option value="Basse">Basse</option>
+            </select>
+          </label>
+
+          <label class="item item-input item-select">
+            <span class="input-label">Catégorie <span class="rouge">*</span></span>
+            <select id="categorie" name="categorie">
+
+<!--               <?php while($tab_mag = mysql_fetch_array($All_mag)){ ?>
+                <option value="<?php echo $tab_mag['id_magasin'] ?>"> <?php echo $tab_mag['nom_magasin'] ?> </option>
+             <?php } ?> -->
+
+                <option value="Finance">Finance</option>
+                <option value="Revenus">Revenus</option>
+              </select>
+          </label>
+
+          <label class="item">
+            <span class="input-label" style="float: left;">Rappel <span class="rouge">*</span></span>
+            <input id="rappel" class="caseVisuel" name="rappel" type="text" value="">
+            <span class="input-label">jour(s) avant.</span>
+          </label>
+
+          <label class="item item-input item-select">
+            <span class="input-label">Périodicité <span class="rouge">*</span></span>
+            <select id="periodicite" name="periodicite">
+                <option value="/">...</option>
+                <option value="Quotidien">Quotidien</option>
+                <option value="Hebdomadaire">Hebdomadaire</option>
+                <option value="Mensuelle">Mensuelle</option>
+                <option value="Annuelle">Annuelle</option>
+            </select>
+          </label>
+
+          <div id="quotidien">
+            <h4 class="padCustom" style="text-align:center;">Quotidien</h4>
+            <label class="item item-input">
+                <span class="input-label">Tous les jours.</span>
+            </label>
+          </div>
+
+          <div id="hebdomadaire">
+            <h4 class="padCustom" style="text-align:center;">Hebdomadaire</h4>
+            <label class="item">
+            <span class="input-label" style="float: left;">Tous les</span>
+            <input id="xSemaine" name="xSemaine" type="text" class="caseVisuel" value="">
+            <span class="input-label">semaine(s).</span>
+          </label>
+
+          <label class="item item-input item-select">
+            <span class="input-label">Choix du jour</span>
+            <select id="choixJourSemaine" name="choixJourSemaine">
+                <option value="1">Lundi</option>
+                <option value="2">Mardi</option>
+                <option value="3">Mercredi</option>
+                <option value="4">Jeudi</option>
+                <option value="5">Vendredi</option>
+                <option value="6">Samedi</option>
+                <option value="7">Dimanche</option>
+            </select>
+          </label>
+          </div>
+
+          <div id="mensuelle">
+            <h4 class="padCustom" style="text-align:center;">Mensuelle</h4>
+            <label class="item">
+            <span class="input-label" style="float: left;">Tous les</span>
+            <input id="xMois" name="xMois" type="text" class="caseVisuel" value="">
+            <span class="input-label">mois.</span>
+          </label>
+
+          <label class="item">
+            <span class="input-label" style="float: left;">Le</span>
+            <input id="xMois" name="xMois" type="text" class="caseVisuel" value="">
+            <span class="input-label"> du mois.</span>
+          </label>
+          </div>
+
+          <div id="annuelle">
+            <h4 class="padCustom" style="text-align:center;">Annuelle</h4>
+            <label class="item item-input item-select">
+            <span class="input-label">Choix du mois</span>
+            <select id="choixMois" name="choixMois">
+                <option value="1">Janvier</option>
+                <option value="2">Février</option>
+                <option value="3">Mars</option>
+                <option value="4">Avril</option>
+                <option value="5">Mai</option>
+                <option value="6">Juin</option>
+                <option value="7">Juillet</option>
+                <option value="8">Aôut</option>
+                <option value="9">Septembre</option>
+                <option value="10">Octobre</option>
+                <option value="11">Novembre</option>
+                <option value="12">Decembre</option>
+            </select>
+          </label>
+          </div>
+
+          <center class="rouge">* Champs obligatoires</center>
+          <button id="enregistrerRappel" name="enregistrerRappel" class="button button-block button-positive">Enregistrer</button>
+
+        </form>
+
+  </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,96 @@
+<ion-view>
+<div class="bar bar-header bar-stable">
+  <h1 class="title">Paramètres</h1>
+</div>
+  <ion-content class="has-header padding">
+
+    <div id="identification">
+      <div class="list">
+          <center><img src="img/nemtysLogo.png"></center>
+          <label class="item item-input">
+              <span class="input-label">Nom <span class="rouge">*</span></span>
+              <input id="nomIdentification" name="nomIdentification" type="text">
+          </label>
+          <label class="item item-input">
+              <span class="input-label">Prénom <span class="rouge">*</span></span>
+              <input id="prenomIdentification" name="prenomIdentification" type="text">
+          </label>
+          <label class="item item-input">
+              <span class="input-label">Date de naissance <span class="rouge">*</span></span>
+              <input id="dateIdentification" name="dateIdentification" type="date">
+          </label>
+          <label class="item item-input">
+              <span class="input-label">Email <span class="rouge">*</span></span>
+              <input id="emailIdentification" name="emailIdentification" type="email">
+          </label>
+
+          <center class="rouge">* Champs obligatoires</center>
+      </div>
+      <button id="submitButton" class="button button-block button-positive">S'identifier</button>
+    </div>
+
+    <div id ="param">
+      <button id="modeEmploi" class="button button-block button-energized">Mode d'emploi</button>
+      <br/>
+      <h4 class="padCustom" style="text-align:center;">Modifier mes informations</h4>
+      <div class="list">
+          <label class="item item-input">
+              <span class="input-label">Nom <span class="rouge">*</span></span>
+              <input id="nom" name="nom" type="text">
+          </label>
+          <label class="item item-input">
+              <span class="input-label">Prénom <span class="rouge">*</span></span>
+              <input id="prenom" name="prenom" type="text">
+          </label>
+          <label class="item item-input">
+              <span class="input-label">Date de naissance <span class="rouge">*</span></span>
+              <input id="date" name="date" type="date">
+          </label>
+          <label class="item item-input">
+              <span class="input-label">Email <span class="rouge">*</span></span>
+              <input id="email" name="email" type="email">
+          </label>
+
+          <center class="rouge">* Champs obligatoires</center>
+      </div>
+      <button id="ModifInfoBtn" class="button button-block button-positive">Modifier</button>
+
+      <br/>
+      <h4 class="padCustom" style="text-align:center;">Modifier mes critères</h4>
+      <div class="list">
+        <!-- Début à implémenter requete -->
+        <div class="item item-button-right">
+         ISF
+          <button class="button button-assertive supCritere">
+              <i class="icon ion-close-round"></i>
+            </button>
+        </div>
+
+        <div class="item item-button-right">
+         Handicap
+          <button class="button button-assertive supCritere">
+              <i class="icon ion-close-round"></i>
+            </button>
+        </div>
+        <!-- Fin à implémenter requete -->
+
+        <div class="item item-button-right">
+          <label class="item-input item-select" style="margin-top:-12px; margin-bottom:-12px;">
+            <span class="input-label" style="font-size:16px; font-weight:normal; margin-left: -10px;">Ajouter</span>
+            <select id="newCrit" name="newCrit">
+                <option value="0">...</option>
+                <option value="ISF">ISF</option>
+                <option value="Handicap">Handicap</option>
+            </select>
+          </label>
+          <button id="ajoutCrit" class="button button-balanced">
+            <i class="icon ion-plus-round"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+      <div class="space-tab"></div>
+  </ion-content>
+</ion-view>

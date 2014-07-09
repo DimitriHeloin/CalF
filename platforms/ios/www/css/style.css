@@ -1,0 +1,24 @@
+/* Empty. Add your own CSS if you like */
+/* Champs obligatoires */
+
+.rouge {
+  color: red;
+}
+
+.padCustom{
+  padding:0 10px;
+}
+
+.space-tab{
+    height: 60px;
+}
+
+.caseVisuel{
+width: 30px;
+float: left;
+}
+
+.tabs
+{
+	visibility: hidden;
+}
